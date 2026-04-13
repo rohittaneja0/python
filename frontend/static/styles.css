@@ -1,0 +1,14 @@
+.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.actions button {
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: white;
+}
