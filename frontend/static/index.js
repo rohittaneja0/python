@@ -28,8 +28,8 @@ function renderTasks() {
     li.innerHTML = `
       <span class="task-text">${task.title}</span>
       <div class="actions">
-        <button class="toggle-btn">✓</button>
-        <button class="delete-btn">✕</button>
+        <button class="toggle-btn em-c-btn em-c-btn--primary">✓</button>
+        <button class="delete-btn em-c-btn em-c-btn--primary">✕</button>
       </div>
     `;
 

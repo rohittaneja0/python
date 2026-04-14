@@ -11,23 +11,25 @@
   </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Todo List</h1>
+    <header id="taskHeader" class="em-c-header em-c-header--blue">
+        <h1>Todo List</h1>
+    </header>
 
-    <form id="taskForm">
-      <input type="text" id="taskInput" placeholder="Add a new task" autocomplete="off" />
-      <button type="submit">Add</button>
-    </form>
+    <div id="taskForm">
+        <form class="em-c-toolbar">
+            <input type="text" id="taskInput" placeholder="Add a new task" autocomplete="off" />
+            <button type="submit" class="em-c-btn em-c-btn--primary">Add</button>
+        </form>
 
-    <div class="filters">
-      <button data-filter="all" class="filter-btn active">All</button>
-      <button data-filter="active" class="filter-btn">Active</button>
-      <button data-filter="completed" class="filter-btn">Completed</button>
+        <div class="filters" style="margin-bottom: 2%;">
+            <button data-filter="all" class="filter-btn active em-c-btn em-c-btn--primary">All</button>
+            <button data-filter="active" class="filter-btn em-c-btn em-c-btn--primary">Active</button>
+            <button data-filter="completed" class="filter-btn em-c-btn em-c-btn--primary">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </div>
     </div>
-
-    <ul id="taskList"></ul>
-  </div>
-
   <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>
