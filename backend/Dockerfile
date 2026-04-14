@@ -7,6 +7,9 @@ WORKDIR /tmp
 # Copy only the requirements first to leverage Docker cache
 COPY requirements.txt .
 
+# Copy the rest of the application code
+COPY . .
+
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -20,9 +23,6 @@ RUN chown -R 1001:0 /tmp
 RUN chmod 755 /tmp
 
 USER 1001
-
-# Copy the rest of the application code
-COPY . .
 
 # Start the application using flask
 CMD ["flask", "--app", "main", "run", "--host", "0.0.0.0"]
