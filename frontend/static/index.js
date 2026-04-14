@@ -5,7 +5,6 @@ const filterButtons = document.querySelectorAll(".filter-btn");
 
 let tasks = [];
 let currentFilter = "all";
-const API ="http://127.0.0.1:5001";
 
 async function loadTasks() {
   const res = await fetch(`${API}/api/tasks`);
