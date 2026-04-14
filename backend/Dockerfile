@@ -20,8 +20,6 @@ RUN chgrp -R 0 /tmp && chmod -R g=u /tmp
 
 RUN chown -R 1001:0 /tmp
 
-RUN chmod 755 /tmp
-
 USER 1001
 
 # Start the application using flask
